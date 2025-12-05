@@ -1,58 +1,35 @@
-# Road Accident Analysis - India (2020) 🇮🇳 🚦
+# Road Accident Data Analysis (India 2020)
 
-This project analyzes road accident data from Million Plus Cities in India for the year 2020. Using Python, it explores patterns regarding accident frequencies, fatalities, causes, and traffic control measures to derive actionable insights.
+## Project Overview
+This project analyzes the "Regulatory Affairs of Road Accident Data 2020 India" dataset to identify key trends and insights regarding road accidents in major Indian cities. The analysis focuses on understanding the distribution of accidents across cities, the primary causes of accidents, and the impact of different traffic control measures.
 
-## 📂 Dataset
-The dataset contains regulatory affairs data regarding road accidents in India (2020).
-- **Download the Data:** [Google Drive Link](https://drive.google.com/file/d/1ft84zICATQqhB1egy4DQJs4bIckcA-0f/view?usp=sharing)
-- **Format:** CSV
+## Dataset
+The dataset contains information about road accidents in Million Plus Cities in India for the year 2020. Key columns include:
+- **Million Plus Cities**: Name of the city.
+- **Cause category**: Broad category of the accident cause (e.g., Traffic Control).
+- **Cause Subcategory**: Specific cause (e.g., Traffic Light Signal, Over Speeding).
+- **Outcome of Incident**: Consequence (e.g., Persons Killed, Total Injured).
+- **Count**: Number of incidents/persons.
 
-## 📊 Key Insights & Visualizations
-The script generates the following insights based on the data:
+## Key Analysis & Insights
+The Python script `analysis_script.py` performs the following analysis:
+1.  **City-wise Trends**: Identifies top cities with the highest number of accidents and fatalities.
+2.  **Cause Analysis**: Visualizes the distribution of accidents by cause category.
+3.  **Traffic Control Impact**: Examines accident outcomes based on different traffic control mechanisms (e.g., Traffic Lights, Police Controlled).
 
-1.  **Highest Accident Rate:** **Chennai** recorded the highest number of road accidents (~26,000+).
-2.  **Highest Fatalities:** **Delhi** recorded the highest number of fatalities (~7,000+), despite having fewer total accidents than Chennai.
-3.  **Traffic Control:** A significant portion of accidents occurred in "Uncontrolled" areas or areas classified as "Others," indicating a need for better traffic management infrastructure.
-4.  **Leading Causes:** The majority of accidents were categorized under "Impacting Vehicle/Object" and "Junction" related incidents.
+### Visualizations Generated
+- `top_10_cities_accidents.png`: Bar chart of top 10 cities by total accidents.
+- `top_10_cities_fatalities.png`: Bar chart of top 10 cities by total fatalities.
+- `accident_causes_distribution.png`: Distribution of accidents across different cause categories.
+- `outcome_by_control_type.png`: Stacked bar chart showing injuries and fatalities for different traffic control types.
 
-## 🛠️ Tech Stack
-* **Language:** Python 3.x
-* **Libraries:**
-    * `pandas` (Data Manipulation)
-    * `matplotlib` (Plotting)
-    * `seaborn` (Statistical Visualization)
-
-## 🚀 How to Run
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    ```
-
-2.  **Install dependencies:**
+## How to Run
+1.  Ensure you have Python installed with the following libraries:
     ```bash
     pip install pandas matplotlib seaborn
     ```
-
-3.  **Configure Data Path:**
-    * Open `analysis_script.py`.
-    * Update the `DATA_PATH` variable on **Line 7** to point to the location where you saved the CSV file on your machine.
-    ```python
-    # Example
-    DATA_PATH = "path/to/your/Regulatory Affairs of Road Accident Data 2020 India.csv"
-    ```
-
-4.  **Run the script:**
+2.  Run the analysis script:
     ```bash
     python analysis_script.py
     ```
-
-## 📈 Generated Outputs
-The script automatically saves the following charts to your local directory:
-* `top_10_cities_accidents.png`
-* `top_10_cities_fatalities.png`
-* `accident_causes_distribution.png`
-* `outcome_by_control_type.png`
-
-## 🤝 Contributing
-Feel free to fork this repository and submit pull requests to improve the analysis or add new visualizations.
+3.  The script will print key statistics to the console and save the visualization images in the same directory.
